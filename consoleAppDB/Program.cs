@@ -15,7 +15,7 @@ namespace consoleAppDB
 
                     db.Blog.Add(new Blog { Url = "http://blogs.msdn.com/adonet" });
                     var count = db.SaveChanges();
-                    Console.WriteLine("{0} records saved to database", count);
+                    Console.WriteLine("{0} - records saved to database", count);
 
                     Console.WriteLine();
                     Console.WriteLine("All blogs in database:");
@@ -23,7 +23,6 @@ namespace consoleAppDB
                     {
                         Console.WriteLine(" - {0}", blog.Url);
                     }
-
 
                 List<Post> ps = db.Post.ToList();
                 Console.WriteLine(ps.Count());
